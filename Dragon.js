@@ -6,11 +6,11 @@ var Dragon = function()
 	this.bIsBreathing = false;
 };
 Dragon.prototype = new Animal();
-Dragon = Interface.implement(FlyBehaviour, Dragon);
-Dragon = Interface.implement(SwimBehaviour, Dragon);
-Dragon = Interface.implement(WalkBehaviour, Dragon);
-Dragon = Interface.implement(VenomousBehaviour, Dragon);
-Dragon = Interface.implement(KillerBehaviour, Dragon);
+Dragon = Interface.implement(FlyBehaviour, Dragon, false);
+Dragon = Interface.implement(SwimBehaviour, Dragon, false);
+Dragon = Interface.implement(WalkBehaviour, Dragon, false);
+Dragon = Interface.implement(VenomousBehaviour, Dragon, false);
+Dragon = Interface.implement(KillerBehaviour, Dragon, false);
 Dragon.prototype.isBreathing = function()
 {
 	return this.bIsBreathing;

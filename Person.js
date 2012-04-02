@@ -1,12 +1,12 @@
 var Person = function(sName, nEnergy)
 {
 	Animal.call(this, (nEnergy || 100), 'Person');
-	this.sName = sName || 'Jhon Doe';
+	this.sName = sName || 'John Doe';
 	this.aPossessions = [];
 	this.sType = 'Person';
 };
 Person.prototype = new Animal();
-Person = Interface.implement(WalkBehaviour, Person);
+Person = Interface.implement(WalkBehaviour, Person, false);
 Person.prototype.isPrincess = function()
 {
 	return this.sType === 'Princess';

@@ -4,15 +4,15 @@ var Knight = function(sName)
 	this.sName = sName || 'John Doe';
 };
 Knight.prototype = new Person();
-Knight = Interface.implement(RideBehaviour, Knight);
+Knight = Interface.implement(RideBehaviour, Knight, false);
 Knight.prototype.ride = function()
 {
-	console.log(sName + ' knight is riding his horse!');
+	console.log(this.sName + ' knight is riding his horse!');
 	this.nEnergy -= 5;
 	return this;
 };
 Knight.prototype.attackUsingSpear = function(oDragon)
 {
-	console.log(sName + ' knight is attacking Dragon with the spear!');
+	console.log(this.sName + ' knight is attacking Dragon with the spear!');
 	oDragon.beInjured(oDragon.nEnergy - 5);
 };

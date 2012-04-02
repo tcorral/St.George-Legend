@@ -13,9 +13,7 @@ var TellTheHistory = function()
 };
 TellTheHistory.prototype.fillVillage = function()
 {
-	var nPerson = 0;
 	var nLenPersons = this.oVillage.nMaxPersons;
-	var oPerson = null;
 	while(nLenPersons--)
 	{
 		this.oVillage.addPerson(new Person());
@@ -25,9 +23,7 @@ TellTheHistory.prototype.fillVillage = function()
 };
 TellTheHistory.prototype.fillFlock = function()
 {
-	var nSheep = 0;
 	var nLenSheeps = this.oVillage.nMaxSheeps;
-	var oSheep = null;
 	while(nLenSheeps--)
 	{
 		this.oVillage.addSheep(new Sheep());

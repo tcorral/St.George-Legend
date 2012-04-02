@@ -30,7 +30,7 @@
 	 * @class Represents an Interface
 	 * @constructor
 	 * @name Interface
-	 * @author Tomas Corral Casas
+	 * @author Tomas Corral
 	 * @version 1.0
 	 * @param aMethods
 	 */
