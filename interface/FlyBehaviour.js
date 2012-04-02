@@ -1,0 +1,1 @@
+var FlyBehaviour = new Interface('fly');

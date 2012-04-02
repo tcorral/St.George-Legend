@@ -1,0 +1,1 @@
+var VenomousBehaviour = new Interface('poison');

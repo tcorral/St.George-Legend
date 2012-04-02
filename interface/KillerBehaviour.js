@@ -1,0 +1,1 @@
+var KillerBehaviour = new Interface('kill');

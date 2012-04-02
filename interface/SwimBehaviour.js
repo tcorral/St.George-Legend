@@ -1,0 +1,1 @@
+var SwimBehaviour = new Interface('swim');
