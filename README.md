@@ -2,7 +2,7 @@
 
 In Catalonia where I live the 23th of April:
 
-* Men give a rose to his woman in love
+* Men give a rose to his woman in love.
 * Women give a book to her man in love.
 
 I hope you enjoy it!
