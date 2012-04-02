@@ -1,6 +1,6 @@
 ### This transcription to Javascript is in honour of Saint George and the legend of the Dragon and the Rose.
 
-In Catalonia where I live the 23th of April:
+In Catalonia where I live on 23th of April...
 
 * Men give a rose to his woman in love.
 * Women give a book to her man in love.
