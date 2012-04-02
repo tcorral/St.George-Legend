@@ -5,7 +5,7 @@ var TellTheHistory = function()
 	this.oKing = new King();
 	this.oPrincess = new Princess('Cleodolinda');
 	this.oKnight = new Knight('Saint George');
-	this.oVillage = new Village('Montblanc')
+	this.oVillage = new Village('Montblanc');
 	this.oPersonToBeSacrificed = null;
 
 	this.fillVillage();
