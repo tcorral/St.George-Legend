@@ -1,0 +1,1 @@
+var RideBehaviour = new Interface('ride');

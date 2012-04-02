@@ -1,17 +1,29 @@
-var Person = function(sName)
+var Person = function(sName, nEnergy)
 {
-	Animal.call(this, 100);
+	Animal.call(this, (nEnergy || 100), 'Person');
 	this.sName = sName || 'Jhon Doe';
 	this.aPossessions = [];
+	this.sType = 'Person';
 };
 Person.prototype = new Animal();
 Person = Interface.implement(WalkBehaviour, Person);
+Person.prototype.isPrincess = function()
+{
+	return this.sType === 'Princess';
+};
 Person.prototype.walk = function()
 {
+	console.log('Person is walking');
 	this.nEnergy -= 5;
 	return this;
 };
-Person.prototype.give = function(oAnimal, oThing)
+Person.prototype.get = function(oPossession)
 {
-
+	console.log('Person receives a ' + oPossession.sType);
+	this.aPossessions.push(oPossession);
+};
+Person.prototype.give = function(oPerson, oPossession)
+{
+	console.log(this.sName + ' gives a ' + oPossession.sType + ' to '+ oPerson.sName);
+	oPerson.get(oPossession);
 };

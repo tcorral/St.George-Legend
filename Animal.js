@@ -1,10 +1,12 @@
-var Animal = function(nEnergy)
+var Animal = function(nEnergy, sType)
 {
 	this.nEnergy = nEnergy || 0;
 	this.bAlive = true;
+	this.sType = sType || 'general';
 };
 Animal.prototype.beInjured = function(nEnergy)
 {
+	console.log('This ' + this.sType + ' is being injured!');
 	this.nEnergy -= nEnergy;
 	if(this.nEnergy <= 0)
 	{
@@ -14,17 +16,20 @@ Animal.prototype.beInjured = function(nEnergy)
 };
 Animal.prototype.die = function()
 {
+	console.log(this.sType + ' has died!');
 	this.nEnergy = 0;
 	this.bAlive = false;
 	return this;
 };
 Animal.prototype.increaseEnergy = function(nEnergy)
 {
+	console.log(this.sType + ' is getting well!');
 	this.nEnergy += nEnergy;
 	return this;
 };
 Animal.prototype.bleedToDeath = function()
 {
+	console.log(this.sType + ' is bleeding to death!');
 	while(this.nEnergy > 0)
 	{
 		this.beInjured(1);
@@ -34,6 +39,7 @@ Animal.prototype.bleedToDeath = function()
 };
 Animal.prototype.eat = function(oAnimal)
 {
+	console.log(this.sType + ' is eating!');
 	var nEnergy = 0;
 	if(oAnimal.bAlive === true)
 	{
@@ -55,6 +61,7 @@ Animal.prototype.eat = function(oAnimal)
 };
 Animal.prototype.sleep = function()
 {
-	this.nEnergy += 800;
+	console.log(this.sType + ' is sleeping!');
+	this.increaseEnergy(800);
 	return this;
 };
