@@ -190,7 +190,7 @@ TellTheHistory.prototype.startDrawToSacrificeOnePerson = function()
 	}
 
 	this.sacrificeOrDestruction();
-	bSaveThePrincessNow = confirm('Do you want to save the princess now?\r\n');
+	bSaveThePrincessNow = confirm('Do you want St.George to save the princess now?\r\n');
 	if(bSaveThePrincessNow == false)
 	{
 		console.log('-------------------------------------------------------------------------------');
