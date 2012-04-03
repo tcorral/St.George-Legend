@@ -13,11 +13,9 @@ Village.prototype.getPerson = function()
 {
 	if((this.aPersons.length % 2) === 0)
 	{
-		console.log('Village ' + this.sName + ' returns an old person!');
 		return this.aPersons.shift();
 	}else
 	{
-		console.log('Village ' + this.sName + ' returns a young person!');
 		return this.aPersons.pop();
 	}
 };
@@ -25,17 +23,14 @@ Village.prototype.getSheep = function()
 {
 	if((this.aSheeps.length % 2) === 0)
 	{
-		console.log('Village ' + this.sName + 'returns an old sheep!');
 		return this.aSheeps.shift();
 	}else
 	{
-		console.log('Village ' + this.sName + 'returns a young sheep!');
 		return this.aSheeps.pop();
 	}
 };
 Village.prototype.addPerson = function(oPerson)
 {
-	console.log('Village ' + this.sName + ' population is growing!');
 	if(this.aPersons.length < (this.nMaxPersons + this.nKing + this.nPrincess))
 	{
 		this.aPersons.push(oPerson);
@@ -43,7 +38,6 @@ Village.prototype.addPerson = function(oPerson)
 };
 Village.prototype.addSheep = function(oSheep)
 {
-	console.log('Village ' + this.sName + ' flock is growing!');
 	if(this.aSheeps.length < this.nMaxSheeps)
 	{
 		this.aSheeps.push(oSheep);
@@ -56,7 +50,9 @@ Village.prototype.toDrawPerson = function()
 };
 Village.prototype.sendPersonToBeSacrificed = function(oPerson)
 {
-	console.log("Person is walking to the Dragon's Lair!");
+	console.log('-------------------------------------------------------------------------------');
+	console.log("Person is walking to the Dragon's Lair as sacrifice to save his/her similar!");
+	console.log('-------------------------------------------------------------------------------');
 	oPerson.walk();
 	oPerson.walk();
 	oPerson.walk();
@@ -66,6 +62,5 @@ Village.prototype.sendPersonToBeSacrificed = function(oPerson)
 };
 Village.prototype.beDamaged = function()
 {
-	console.log('Village ' + this.sName + ' is being damaged!');
 	this.nEnergy -= 1000;
 };

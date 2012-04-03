@@ -13,17 +13,16 @@ Person.prototype.isPrincess = function()
 };
 Person.prototype.walk = function()
 {
-	console.log('Person is walking');
 	this.nEnergy -= 5;
 	return this;
 };
 Person.prototype.get = function(oPossession)
 {
-	console.log('Person receives a ' + oPossession.sType);
+	console.log(this.sName + ' receives a ' + oPossession.sType + '!');
 	this.aPossessions.push(oPossession);
 };
 Person.prototype.give = function(oPerson, oPossession)
 {
-	console.log(this.sName + ' gives a ' + oPossession.sType + ' to '+ oPerson.sName);
+	console.log(this.sName + ' gives a ' + oPossession.sType + ' to '+ oPerson.sName + '!');
 	oPerson.get(oPossession);
 };

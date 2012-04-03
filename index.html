@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<link type="text/css" href="css/style.css" rel="stylesheet"/>
 	<script type="text/javascript" src="utils/Interface.js"></script>
 	<script type="text/javascript" src="interface/FlyBehaviour.js"></script>
 	<script type="text/javascript" src="interface/KillerBehaviour.js"></script>
@@ -23,7 +24,33 @@
 	<script type="text/javascript" src="TellTheHistory.js"></script>
 </head>
 <body>
+	<ul id="legend">
+	</ul>
 	<script type="text/javascript">
+		var oLegend = document.getElementById('legend');
+		var fpConsoleLogProxy = function(){};
+		var fpAddItemsToLegend = function(sMessage)
+		{
+			var oItem = document.createElement("li");
+			var oText = document.createTextNode(sMessage);
+			oItem.appendChild(oText);
+			oLegend.appendChild(oItem);
+			oItem = oText = null;
+		};
+		if(typeof console === 'undefined')
+		{
+			console = {
+				log: fpAddItemsToLegend
+			};
+		}else if(typeof console.log !== 'undefined')
+		{
+			fpConsoleLogProxy = console.log;
+			console.log = function(sMessage)
+			{
+				fpAddItemsToLegend.call(this, sMessage);
+				fpConsoleLogProxy.call(this, sMessage);
+			};
+		}
 		var oTellTheHistory = new TellTheHistory();
 		oTellTheHistory.tell();
 	</script>

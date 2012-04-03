@@ -13,6 +13,6 @@ Knight.prototype.ride = function()
 };
 Knight.prototype.attackUsingSpear = function(oDragon)
 {
-	console.log(this.sName + ' knight is attacking Dragon with the spear!');
+	console.log(this.sName + ' knight is attacking Dragon with his spear!');
 	oDragon.beInjured(oDragon.nEnergy - 5);
 };

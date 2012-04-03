@@ -48,7 +48,7 @@ Dragon.prototype.blowVenomousBreath = function()
 };
 Dragon.prototype.kill = function(oAnimal)
 {
-	console.log('Dragon is killing a' + oAnimal.sType);
+	console.log('Dragon is killing a ' + oAnimal.sType + '!');
 	oAnimal.die();
 	return this;
 };
