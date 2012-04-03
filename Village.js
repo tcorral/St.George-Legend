@@ -50,9 +50,9 @@ Village.prototype.toDrawPerson = function()
 };
 Village.prototype.sendPersonToBeSacrificed = function(oPerson)
 {
-	console.log('-------------------------------------------------------------------------------');
+	console.log('--------------------------------------------------------------------------------------------------------------------');
 	console.log("Person is walking to the Dragon's Lair as sacrifice to save his/her similar!");
-	console.log('-------------------------------------------------------------------------------');
+	console.log('--------------------------------------------------------------------------------------------------------------------');
 	oPerson.walk();
 	oPerson.walk();
 	oPerson.walk();
