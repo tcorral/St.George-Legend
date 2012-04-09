@@ -11,8 +11,8 @@ Knight.prototype.ride = function()
 	this.nEnergy -= 5;
 	return this;
 };
-Knight.prototype.attackUsingSpear = function(oDragon)
+Knight.prototype.attackUsingLance = function(oDragon)
 {
-	console.log(this.sName + ' knight is attacking Dragon with his spear!');
+	console.log(this.sName + ' knight is attacking Dragon with his lance!');
 	oDragon.beInjured(oDragon.nEnergy - 5);
 };

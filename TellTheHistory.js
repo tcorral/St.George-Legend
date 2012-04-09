@@ -68,7 +68,7 @@ TellTheHistory.prototype.savePrincess = function()
 	console.log('--------------------------------------------------------------------------------------------------------------------');
 	console.log("St.George arrived to Dragon's Lair!");
 	console.log('--------------------------------------------------------------------------------------------------------------------');
-	this.oKnight.attackUsingSpear(this.oDragon);
+	this.oKnight.attackUsingLance(this.oDragon);
 	this.oDragon.bleedToDeath();
 	oRose.comesUp();
 	this.oKnight.give(this.oPrincess, oRose);

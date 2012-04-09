@@ -5,6 +5,6 @@ var Rose = function()
 };
 Rose.prototype.comesUp = function()
 {
-	console.log('Rose is coming up! Now is a beautiful flower!');
+	console.log("Rose is coming out! It's becoming a beautiful flower.");
 	this.sState = 'flower';
 };
